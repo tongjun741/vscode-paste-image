@@ -1,5 +1,5 @@
 {
-  "name": "vscode-paste-image",
+  "name": "vscode-paste-image-tj",
   "displayName": "Paste Image",
   "description": "paste image from clipboard directly",
   "version": "1.0.4",
@@ -127,7 +127,16 @@
         "mac": "cmd+alt+v",
         "when": "editorTextFocus"
       }
-    ]
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "extension.pasteImage",
+          "when": "editorLangId == markdown",
+          "group": "Paste Image"
+        }
+      ]
+    }
   },
   "scripts": {
     "vscode:prepublish": "node ./node_modules/vscode/bin/compile",
